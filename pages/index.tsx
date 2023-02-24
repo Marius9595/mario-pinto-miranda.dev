@@ -1,13 +1,14 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
+import {PostList as PostList} from '../components/post-list'
+import { Intro } from '../components/intro'
 import { getAllPosts } from '../lib/api'
 import Head from 'next/head'
-import Post from '../interfaces/post'
+import Nav from '../components/navbar'
+import Footer from '../components/footer'
+import Meta from '../components/meta'
+import { Box } from '@chakra-ui/react'
+import { Post } from '../components/molecules/post-preview'
 
-type Props = {
+interface Props {
   allPosts: Post[]
 }
 
@@ -16,25 +17,16 @@ export default function Index({ allPosts }: Props) {
   const morePosts = allPosts.slice(1)
   return (
     <>
-      <Layout>
+        <Meta></Meta>
         <Head>
           <title>{`Mario Pinto Miranda`}</title>
         </Head>
-        <Container>
-          <Intro />
-          {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
-            />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
-        </Container>
-      </Layout>
+        <Box>
+          <Nav></Nav>
+          <Intro></Intro>
+          <PostList posts={allPosts.slice(0,3)} />
+        </Box>
+        <Footer/>
     </>
   )
 }
@@ -44,9 +36,9 @@ export const getStaticProps = async () => {
     'title',
     'date',
     'slug',
-    'author',
     'coverImage',
     'excerpt',
+    'imageUrl'
   ])
 
   return {

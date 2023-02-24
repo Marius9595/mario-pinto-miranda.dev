@@ -1,3 +1,4 @@
+import { Box } from '@chakra-ui/react'
 import markdownStyles from './markdown-styles.module.css'
 
 type Props = {
@@ -6,12 +7,13 @@ type Props = {
 
 const PostBody = ({ content }: Props) => {
   return (
-    <div className="max-w-2xl mx-auto">
+
+    <Box margin={'15%'}>
       <div
         className={markdownStyles['markdown']}
         dangerouslySetInnerHTML={{ __html: content }}
       />
-    </div>
+    </Box>
   )
 }
 
