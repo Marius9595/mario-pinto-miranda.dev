@@ -8,14 +8,14 @@ import { AboutAuthor } from '../molecules/about-author';
 
 export const AuthorBlogCover = () => {
   return (
-    <Container maxW={'7xl'} p="12">
+    <Container maxW={'7xl'} p={{md: '12', sm: '0'}}>
       <Box
-        marginTop={{ base: '1', sm: '5' }}
+        marginTop={{ base: '1', sm: '2' }}
         display="flex"
-        flexDirection={{ base: 'column-reverse', sm: 'row-reverse' }}
+        flexDirection={{ base: 'column-reverse', sm: 'row' }}
         justifyContent="space-between">
-        <ImageAuthor/>
         <AboutAuthor/>
+        <ImageAuthor/>
       </Box>
     </Container>
   );

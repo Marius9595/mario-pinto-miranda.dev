@@ -3,16 +3,14 @@ import ErrorPage from 'next/error'
 import { PostBody } from '../../components/organisms/post-body'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
-import { Box, Text } from '@chakra-ui/react'
+import { Box } from '@chakra-ui/react'
 import {Nav} from '../../components/organisms/navbar'
 import { PostHeader } from '../../components/organisms/post-header'
 
 
 export default function Post( {post} ) {
   const router = useRouter()
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
   }
@@ -27,7 +25,7 @@ export default function Post( {post} ) {
                 <meta property="og:image" content={post.imageUrl} />
               </Head>
               <Nav></Nav>
-              <Box marginX={'15%'} marginTop={'5%'}>
+              <Box marginX={{base: "5%", sm:'15%', md:'15%'}} marginTop={'5%'}>
                 <PostHeader
                   title={post.title}
                   srcImage={post.coverImage}

@@ -15,8 +15,8 @@ export const AboutAuthor = () => {
       marginTop={{ base: '3', sm: '0' }}>
 
       <Heading as="h1">Mario S. Pinto Miranda</Heading>
-      <Text marginBottom={2} fontSize="x-large">
-        (Software Developer)
+      <Text marginBottom={2} fontSize={{sm: "medium", md: "x-large"}}> 
+        Software Developer
       </Text>
       <Tags tags={['Data', 'Web', 'Mobile']} />
 
@@ -24,7 +24,7 @@ export const AboutAuthor = () => {
         as="p"
         marginTop="2"
         color={useColorModeValue('gray.700', 'gray.200')}
-        fontSize="x-large">
+        fontSize={{sm: "medium", md: "x-large"}}>
         Entusiasta, pragmático y alineado con las mejores prácticas
         para desarrollar software de calidad
       </Text>
