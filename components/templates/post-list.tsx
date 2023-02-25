@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Heading, Flex } from '@chakra-ui/react';
 
-import { PostPreview, Post } from './molecules/post-preview';
+import { PostPreview, Post } from '../organisms/post-preview';
 
 
 interface Props {

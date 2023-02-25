@@ -1,5 +1,5 @@
 import { Box } from '@chakra-ui/react'
-import markdownStyles from './markdown-styles.module.css'
+import markdownStyles from './../markdown-styles.module.css'
 
 type Props = {
   content: string

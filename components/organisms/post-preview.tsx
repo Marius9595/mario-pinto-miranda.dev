@@ -42,7 +42,7 @@ export const PostPreview = (postPreview:Post) =>{
                 </Tag>
                 <BlogTags tags={['Engineering', 'Product']} marginTop="3" />
                 <Text as="p" fontSize="md" marginTop="2">
-                  {postPreview.excerpt}
+                    {postPreview.excerpt}
                 </Text>
               </Box>
             </WrapItem>
