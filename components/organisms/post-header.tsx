@@ -1,29 +1,33 @@
 import { Box, Heading, Image } from '@chakra-ui/react'
+import { DatePost } from '../atoms/date-post'
+import { PostTags } from '../molecules/post-tags'
 
 interface PostHeaderProps{
     srcImage: string
     title: string
+    tags: string[]
+    date: string
 }
 
 export const PostHeader = ({
     srcImage,
-    title
+    title,
+    tags,
+    date
 }:PostHeaderProps) => {
     return (
         <Box>
             <Image
-                transform="scale(1.0)"
                 src={srcImage}
                 alt='algo'
-                objectFit="contain"
-                width="100%"
-                transition="0.3s ease-in-out"
-                _hover={{
-                    transform: 'scale(1.05)',
-                }} />
+                objectFit="cover"
+                height="20%"
+            />
             <Heading>
                 {title}
             </Heading>
+            <DatePost date={date} size='lg' marginTop={2} />
+            <PostTags tags={tags} marginTop="2" size={'lg'} />
         </Box>
     )
 }

@@ -19,7 +19,7 @@ export default function Index({ allPosts }: Props) {
     <>
         <Meta></Meta>
         <Head>
-          <title>{`Mario Pinto Miranda`}</title>
+          <title>{`Home`}</title>
         </Head>
         <Box>
           <Nav></Nav>

@@ -5,9 +5,9 @@ import { getPostBySlug, getAllPosts } from '../../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
-import { Box } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 import {Nav} from '../../components/organisms/navbar'
-
+import { PostHeader } from '../../components/organisms/post-header'
 
 
 export default function Post( {post} ) {
@@ -26,9 +26,16 @@ export default function Post( {post} ) {
                 <title>{post.title}</title>
                 <meta property="og:image" content={post.imageUrl} />
               </Head>
-              <Box>
-                <Nav></Nav>
+              <Nav></Nav>
+              <Box marginX={'15%'} marginTop={'5%'}>
+                <PostHeader
+                  title={post.title}
+                  srcImage={post.coverImage}
+                  tags={post.tags.split(',')}
+                  date={post.date}
+                />
                 <PostBody content={post.content}/>
+               
               </Box>
           </>
         )}
@@ -51,6 +58,7 @@ export async function getStaticProps({ params }: Params) {
     'content',
     'ogImage',
     'coverImage',
+    'tags'
   ])
   const content = await markdownToHtml(post.content || '')
 

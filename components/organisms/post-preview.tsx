@@ -5,9 +5,9 @@ import Link from 'next/link';
 import {Box,Wrap,WrapItem,} from '@chakra-ui/react';
 
 import { ImagePostPreview } from '../atoms/image-post-preview';
-import { TagsPost } from '../molecules/blog-tags';
+import { PostTags } from '../molecules/post-tags';
 import { TitlePostPreview } from '../atoms/title-post-preview';
-import { DatePostPreview } from '../atoms/date-post-preview';
+import { DatePost } from '../atoms/date-post';
 import { ExcerptPostPreview } from '../atoms/excerpt-post-preview';
 
 
@@ -34,8 +34,8 @@ export const PostPreview = (postPreview:Post) =>{
                   <ImagePostPreview src={postPreview.imageUrl} alt='algo'/>
                   <TitlePostPreview text={postPreview.title} />
                 </Link>
-                <DatePostPreview date={postPreview.date} />
-                <TagsPost tags={['Engineering', 'Product']} marginTop="3" />
+                <DatePost date={postPreview.date} size='sm' marginTop={2} />
+                <PostTags tags={['Engineering', 'Product']} marginTop="3" size='md'/>
                 <ExcerptPostPreview text={postPreview.excerpt}/>
               </Box>
             </WrapItem>
