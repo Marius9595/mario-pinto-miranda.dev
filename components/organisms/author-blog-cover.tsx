@@ -12,7 +12,7 @@ export const AuthorBlogCover = () => {
       <Box
         marginTop={{ base: '1', sm: '5' }}
         display="flex"
-        flexDirection={{ base: 'column', sm: 'row' }}
+        flexDirection={{ base: 'column-reverse', sm: 'row-reverse' }}
         justifyContent="space-between">
         <ImageAuthor/>
         <AboutAuthor/>
