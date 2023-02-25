@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
-import PostBody from '../../components/organisms/post-body'
+import { PostBody } from '../../components/organisms/post-body'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'

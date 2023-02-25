@@ -5,9 +5,8 @@ type Props = {
   content: string
 }
 
-const PostBody = ({ content }: Props) => {
+export const PostBody = ({ content }: Props) => {
   return (
-
     <Box margin={'15%'}>
       <div
         className={markdownStyles['markdown']}
@@ -16,5 +15,3 @@ const PostBody = ({ content }: Props) => {
     </Box>
   )
 }
-
-export default PostBody

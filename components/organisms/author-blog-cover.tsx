@@ -15,7 +15,7 @@ export const AuthorBlogCover = () => {
         flexDirection={{ base: 'column', sm: 'row' }}
         justifyContent="space-between">
         <ImageAuthor/>
-        {AboutAuthor()}
+        <AboutAuthor/>
       </Box>
     </Container>
   );
