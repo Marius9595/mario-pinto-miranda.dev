@@ -1,11 +1,10 @@
 import {PostList as PostList} from '../components/templates/post-list'
 import { AuthorBlogCover } from '../components/organisms/author-blog-cover'
 import { getAllPosts } from '../lib/api'
-import Head from 'next/head'
 import { Nav } from '../components/organisms/navbar'
-import Footer from '../components/organisms/footer'
+import {Footer} from '../components/organisms/footer'
 import {Meta} from '../components/organisms/meta'
-import { Box } from '@chakra-ui/react'
+import { Box, Container } from '@chakra-ui/react'
 import { Post } from '../components/organisms/post-preview'
 
 interface Props {
@@ -15,10 +14,10 @@ interface Props {
 export default function Index({ allPosts }: Props) {
   return (
     <>
-        <Meta></Meta>
-        <Head>
-          <title>{`Home`}</title>
-        </Head>
+        <Meta
+          title='Home'
+          description='The first page of website of Mario Pinto'
+        />
         <Box>
           <Nav></Nav>
           <AuthorBlogCover></AuthorBlogCover>

@@ -2,11 +2,11 @@ import { useRouter } from 'next/router'
 import ErrorPage from 'next/error'
 import { PostBody } from '../../components/organisms/post-body'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
-import Head from 'next/head'
 import markdownToHtml from '../../lib/markdownToHtml'
 import { Box } from '@chakra-ui/react'
 import {Nav} from '../../components/organisms/navbar'
 import { PostHeader } from '../../components/organisms/post-header'
+import { Meta } from '../../components/organisms/meta'
 
 
 export default function Post( {post} ) {
@@ -20,10 +20,7 @@ export default function Post( {post} ) {
           'Loading…'
         ) : (
           <>
-              <Head>
-                <title>{post.title}</title>
-                <meta property="og:image" content={post.imageUrl} />
-              </Head>
+              <Meta title={post.title}  description={post.excerpt}/>
               <Nav></Nav>
               <Box marginX={{base: "5%", sm:'15%', md:'15%'}} marginTop={'5%'}>
                 <PostHeader

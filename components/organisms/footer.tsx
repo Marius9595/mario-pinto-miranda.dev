@@ -7,7 +7,7 @@ import {
 } from '@chakra-ui/react';
 import { SocialMediaStack } from '../molecules/social-media-stack';
 
-export default function Footer() {
+export const Footer = () => {
   return (
     <Box
       bg={useColorModeValue('gray.50', 'gray.900')}
