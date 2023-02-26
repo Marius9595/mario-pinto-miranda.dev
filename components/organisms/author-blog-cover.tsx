@@ -8,7 +8,7 @@ import { AboutAuthor } from '../molecules/about-author';
 
 export const AuthorBlogCover = () => {
   return (
-    <Container maxW={'7xl'} p={{md: '12', sm: '0'}}>
+    <Container maxW={'max'} p={{md: '12', base: '4'}} >
       <Box
         marginTop={{ base: '1', sm: '2' }}
         display="flex"

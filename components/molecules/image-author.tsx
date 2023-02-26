@@ -16,7 +16,7 @@ export const ImageAuthor = () => {
         marginTop="5%">
         <Image
           borderRadius="lg"
-          src={'/assets/blog/author/author.jpg'}
+          src={'/assets/blog/author/author.png'}
           alt="some good alt text"
           objectFit="contain" />
       </Box>

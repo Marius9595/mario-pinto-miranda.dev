@@ -20,7 +20,7 @@ export const Nav = () => {
         <Flex h={16} alignItems={'center'} justifyContent={'space-between'}>
           <Box>
             <Link href="/">
-                <Text fontWeight={'bold'}>Mario S. Pinto Miranda</Text>
+                <Text fontWeight={'bold'}>🧑🏽‍💻 Mario S. Pinto Miranda</Text>
             </Link>
           </Box>
           <Flex alignItems={'center'}>

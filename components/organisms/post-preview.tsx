@@ -15,15 +15,14 @@ export interface Post {
     slug: string
     title: string
     date: string
-    coverImage: string
     excerpt: string
     imageUrl: string
-    content: string
+    tags: string
 }
 
 export const PostPreview = (postPreview:Post) =>{
     return (
-      <Box flex={1}>
+      <Box flex={1} marginX="5">
         <Wrap spacing="30px" marginTop="5">
             <WrapItem width={{ base: '100%', sm: '60%', md: '70%', lg: '80%' }}>
               <Box borderRadius="lg" overflow="hidden">
@@ -35,7 +34,7 @@ export const PostPreview = (postPreview:Post) =>{
                   <TitlePostPreview text={postPreview.title} />
                 </Link>
                 <DatePost date={postPreview.date} size='sm' marginTop={2} />
-                <PostTags tags={['Engineering', 'Product']} marginTop="3" size='md'/>
+                <PostTags tags={postPreview.tags.split(',')} marginTop="3" size='md'/>
                 <ExcerptPostPreview text={postPreview.excerpt}/>
               </Box>
             </WrapItem>

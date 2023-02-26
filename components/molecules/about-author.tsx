@@ -1,9 +1,11 @@
 import React from 'react';
-import {
-  Box,
-  Heading, Text, useColorModeValue
-} from '@chakra-ui/react';
+
+import {Box} from '@chakra-ui/react';
+
 import { Tags } from './tags';
+import { AuthorDescription } from '../atoms/author-description';
+import { RoleOfAuthor } from '../atoms/role-of-author';
+import { AuthorName } from '../atoms/author-name';
 
 export const AboutAuthor = () => {
   return (
@@ -12,22 +14,16 @@ export const AboutAuthor = () => {
       flex="1"
       flexDirection="column"
       justifyContent="center"
-      marginTop={{ base: '3', sm: '0' }}>
-
-      <Heading as="h1">Mario S. Pinto Miranda</Heading>
-      <Text marginBottom={2} fontSize={{sm: "medium", md: "x-large"}}> 
-        Software Developer
-      </Text>
-      <Tags tags={['Data', 'Web', 'Mobile']} />
-
-      <Text
-        as="p"
-        marginTop="2"
-        color={useColorModeValue('gray.700', 'gray.200')}
-        fontSize={{sm: "medium", md: "x-large"}}>
-        Entusiasta, pragmático y alineado con las mejores prácticas
-        para desarrollar software de calidad
-      </Text>
+      marginTop={{ base: '3', sm: '0' }}
+      textAlign={{base:"center", sm:"center", md:"start"}}
+    >
+      <AuthorName/>
+      <RoleOfAuthor/>
+      <Tags size='lg' tags={['Data', 'Web', 'Mobile']} />
+      <AuthorDescription/>
     </Box>
   );
 };
+
+
+
