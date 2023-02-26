@@ -3,8 +3,6 @@ import { Text, useColorModeValue} from '@chakra-ui/react';
 import { Span } from './span';
 
 export const AuthorDescription = () => {
-  const bold='bold';
-
   return (
     <Text
       as="p"
@@ -25,5 +23,3 @@ export const AuthorDescription = () => {
     </Text>
   )
 };
-
-
