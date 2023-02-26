@@ -9,7 +9,7 @@ export const RoleOfAuthor = () => {
       fontSize={{ base: "x-large", sm: "medium", md: "5xl" }}
       as="h2"
     >
-      Sofware Developer
+      Software Developer 
     </Text>
   )
 };
