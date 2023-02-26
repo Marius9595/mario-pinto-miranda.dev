@@ -5,10 +5,10 @@ import { SocialButton } from '../atoms/social-button';
 export function SocialMediaStack() {
   return (
     <Stack direction={'row'} spacing={6}>
-      <SocialButton label={'Twitter'} href={'#'}>
+      <SocialButton label={'Linkedin'} href={'https://www.linkedin.com/in/mariopintomiranda/'}>
         <FaLinkedinIn />
       </SocialButton>
-      <SocialButton label={'YouTube'} href={'#'}>
+      <SocialButton label={'YouTube'} href={'https://www.youtube.com/channel/UCq-GrA0UA2Wb7G9yMhR9xFA#'}>
         <FaYoutube />
       </SocialButton>
       <SocialButton label={'Instagram'} href={'#'}>
