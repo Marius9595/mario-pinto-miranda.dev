@@ -30,7 +30,6 @@ export default function Post( {post} ) {
                   date={post.date}
                 />
                 <PostBody content={post.content}/>
-               
               </Box>
           </>
         )}

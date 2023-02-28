@@ -1,5 +1,4 @@
 import Head from 'next/head'
-import {HOME_OG_IMAGE_URL } from '../../lib/constants'
 
 interface MetaProps{
   title: string
@@ -38,10 +37,10 @@ export const Meta = ({title, description}:MetaProps) => {
       <meta name="theme-color" content="#000" />
       <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
       <meta
-        name={title}
+        name='description'
         content={description}
       />
-      <meta property="og:image" content={HOME_OG_IMAGE_URL} />
+      <title>{title}</title>
     </Head>
   )
 }
