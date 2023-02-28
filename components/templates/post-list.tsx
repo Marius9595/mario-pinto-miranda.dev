@@ -12,9 +12,6 @@ interface Props {
 export const PostList = ({ posts }: Props) => {
   return (
     <Box marginTop={{base:"8", sm:"10", md:"10"}}>
-      <Heading as="h2" textAlign={'center'} fontSize={{ base: "x-large", sm: "medium", md: "6xl" }} >
-        Últimos Posts 🔽
-      </Heading>
       <Flex maxW={'max'} p={{md:"12", base:"4", sm:"4"}} flexWrap="wrap">
           {posts.map((post) => (
             <PostPreview  

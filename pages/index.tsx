@@ -4,7 +4,7 @@ import { getAllPosts } from '../lib/api'
 import { Nav } from '../components/organisms/navbar'
 import {Footer} from '../components/organisms/footer'
 import {Meta} from '../components/organisms/meta'
-import { Box, Container } from '@chakra-ui/react'
+import { Box, Heading } from '@chakra-ui/react'
 import { Post } from '../components/organisms/post-preview'
 
 interface Props {
@@ -16,11 +16,14 @@ export default function Index({ allPosts }: Props) {
     <>
         <Meta
           title='Home'
-          description='The first page of website of Mario Pinto'
+          description='web site of Mario Pinto Miranda'
         />
         <Box>
           <Nav></Nav>
           <AuthorBlogCover></AuthorBlogCover>
+          <Heading as="h2" textAlign={'center'} fontSize={{ base: "x-large", sm: "medium", md: "6xl" }} >
+            Últimos Posts 🔽
+          </Heading>
           <PostList posts={allPosts.slice(0,3)} />
         </Box>
         <Footer/>
