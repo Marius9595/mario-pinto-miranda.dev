@@ -8,16 +8,20 @@ import {
   useDisclosure,
   Stack,
   Icon,
-  Text
+  Text,
+  Button,
+  useColorMode
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { MdCode } from 'react-icons/md'
+import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import { NavLink } from "../atoms/nav-link";
 
 
 export  function Nav() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  const { colorMode, toggleColorMode } = useColorMode()
   return (
     <>
       <Box bg={"orange.600"} px={4}>
@@ -48,12 +52,18 @@ export  function Nav() {
               <NavLink text="Blog" href="blog"></NavLink>
             </HStack>
           </HStack>
+          <Button onClick={toggleColorMode}>
+                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+          </Button>
         </Flex>
 
         {isOpen ? (
           <Box pb={4}>
             <Stack as={"nav"} spacing={4}>
               <NavLink text="Blog" href="blog"></NavLink>
+              <Button onClick={toggleColorMode}>
+                Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
+              </Button>
             </Stack>
           </Box>
         ) : null}
