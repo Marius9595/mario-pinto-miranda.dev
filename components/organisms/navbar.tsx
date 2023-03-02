@@ -20,11 +20,17 @@ import { NavLink } from "../atoms/nav-link";
 
 export  function Nav() {
   const { isOpen, onOpen, onClose } = useDisclosure();
-
   const { colorMode, toggleColorMode } = useColorMode()
+
+  let backgroundColor;
+  colorMode === 'light' ? backgroundColor="orange.500" : backgroundColor="orange.600"
+
   return (
     <>
-      <Box bg={"orange.500"} px={4}>
+      <Box
+       bg={backgroundColor}
+      px={4}
+      >
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
