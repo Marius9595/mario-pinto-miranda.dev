@@ -44,8 +44,11 @@ export  function Nav() {
             <Link href="/" _hover={{textDecoration: "none"}}>
             <Flex alignItems="center">
                 <Icon as={MdCode} w={8} h={8} marginEnd={2}/>
-                <Text fontSize="l" fontWeight="bold">
+                <Text display={{base:"none", sm:"none", md:"inherit"}} fontSize="l" fontWeight="bold">
                   Mario S. Pinto Miranda
+                </Text>
+                <Text marginEnd={0.5} fontSize="l" fontWeight="bold" display={{md:"none"}}>
+                  Mario Pinto
                 </Text>
               </Flex>
             </Link>
@@ -67,9 +70,6 @@ export  function Nav() {
           <Box pb={4}>
             <Stack as={"nav"} spacing={4}>
               <NavLink text="Blog" href="blog"></NavLink>
-              <Button onClick={toggleColorMode}>
-                Toggle {colorMode === 'light' ? 'Dark' : 'Light'}
-              </Button>
             </Stack>
           </Box>
         ) : null}

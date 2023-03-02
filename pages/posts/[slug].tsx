@@ -24,8 +24,8 @@ export default function Post( {post} ) {
               <Nav></Nav>
               <Box
                 marginX={{base: "2%", sm:'5%', md:'5%',lg:'5%'}}
-                paddingX={{base: "3%", sm:'3%', md:'2%',lg:'3%'}}
-                paddingTop={{base: "0%", sm:'0%', md:'2%',lg:'5%'}}
+                paddingX={{base: "3%", sm:'3%', md:'10%',lg:'15%'}}
+                paddingTop={{base: "5%", sm:'5%', md:'2%',lg:'5%'}}
               >
                 <PostHeader
                   title={post.title}
