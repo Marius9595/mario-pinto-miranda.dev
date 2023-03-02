@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading, Flex, Box } from '@chakra-ui/react';
+import { Flex, Box } from '@chakra-ui/react';
 
 import { PostPreview, Post } from '../organisms/post-preview';
 
@@ -11,8 +11,8 @@ interface Props {
 
 export const PostList = ({ posts }: Props) => {
   return (
-    <Box marginTop={{base:"8", sm:"10", md:"10"}}>
-      <Flex maxW={'max'} p={{md:"12", base:"4", sm:"4"}} flexWrap="wrap">
+    <Box marginTop={{base:"0", sm:"05", md:"5", lg:"8"}}>
+      <Flex maxW={'max'} p={{base:"0", sm:"2", md:"8", lg:"10"}} flexWrap="wrap">
           {posts.map((post) => (
             <PostPreview  
               imageUrl={post.imageUrl}

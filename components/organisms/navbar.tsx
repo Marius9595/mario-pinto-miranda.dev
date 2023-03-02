@@ -12,23 +12,8 @@ import {
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import { MdCode } from 'react-icons/md'
+import { NavLink } from "../atoms/nav-link";
 
-const Links = ["Blog", "Timeline"];
-
-const NavLink = ({ children }) => (
-  <Link
-    px={2}
-    py={1}
-    rounded={"md"}
-    _hover={{
-      textDecoration: "none",
-      bg: "orange.500"
-    }}
-    href={"#"}
-  >
-    <Text>{children}</Text>
-  </Link>
-);
 
 export  function Nav() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -60,9 +45,7 @@ export  function Nav() {
               spacing={4}
               display={{ base: "none", md: "flex" }}
             >
-              {Links.map(link => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              <NavLink text="Blog" href="blog"></NavLink>
             </HStack>
           </HStack>
         </Flex>
@@ -70,9 +53,7 @@ export  function Nav() {
         {isOpen ? (
           <Box pb={4}>
             <Stack as={"nav"} spacing={4}>
-              {Links.map(link => (
-                <NavLink key={link}>{link}</NavLink>
-              ))}
+              <NavLink text="Blog" href="blog"></NavLink>
             </Stack>
           </Box>
         ) : null}

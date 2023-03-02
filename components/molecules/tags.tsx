@@ -8,7 +8,6 @@ import {
 export interface ITags {
   tags: Array<string>;
   marginTop?: SpaceProps['marginTop'];
-  size:string
 }
 
 export const Tags: React.FC<ITags> = (props) => {
@@ -21,11 +20,10 @@ export const Tags: React.FC<ITags> = (props) => {
       {props.tags.map((tag) => {
         return (
           <Tag 
-          size={props.size} 
           variant="solid" 
           colorScheme="orange"
           key={tag} 
-          fontSize={{sm: "medium", md: "3xl" }}>
+          fontSize={{base:'small', sm: "xx-small", md: "small", lg:'1xl' }}>
             {tag}
           </Tag>
         );

@@ -40,6 +40,10 @@ export const Meta = ({title, description}:MetaProps) => {
         name='description'
         content={description}
       />
+      <meta
+        name='author'
+        content='Mario Sebastián Pinto Miranda'
+      />
       <title>{title}</title>
     </Head>
   )

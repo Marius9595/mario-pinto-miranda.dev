@@ -6,7 +6,7 @@ export const RoleOfAuthor = () => {
   return(
     <Text
       marginBottom={2}
-      fontSize={{ base: "x-large", sm: "medium", md: "5xl" }}
+      fontSize={{ base: "1xl", sm: "1xl", md: "2xl", xl:'3xl'}}
       as="h2"
     >
       Software Developer 

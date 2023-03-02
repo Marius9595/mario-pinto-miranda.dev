@@ -15,13 +15,13 @@ export default function Index({ allPosts }: Props) {
   return (
     <>
         <Meta
-          title='Home'
+          title='Mario S. Pinto Miranda | Software Developer'
           description='web site of Mario Pinto Miranda'
         />
         <Box>
           <Nav></Nav>
           <AuthorBlogCover></AuthorBlogCover>
-          <Heading as="h2" textAlign={'center'} fontSize={{ base: "x-large", sm: "medium", md: "6xl" }} >
+          <Heading as="h2" textAlign={'center'} fontSize={{ base: "1xl", sm: "2xl", md: "3xl", lg:'4xl' }} >
             Últimos Posts 🔽
           </Heading>
           <PostList posts={allPosts.slice(0,3)} />

@@ -22,10 +22,13 @@ export default function Post( {post} ) {
           <>
               <Meta title={post.title}  description={post.excerpt}/>
               <Nav></Nav>
-              <Box marginX={{base: "5%", sm:'15%', md:'15%'}} marginTop={'5%'}>
+              <Box
+                marginX={{base: "2%", sm:'5%', md:'5%',lg:'5%'}}
+                paddingX={{base: "3%", sm:'3%', md:'2%',lg:'3%'}}
+                paddingTop={{base: "0%", sm:'0%', md:'2%',lg:'5%'}}
+              >
                 <PostHeader
                   title={post.title}
-                  srcImage={post.coverImage}
                   tags={post.tags.split(',')}
                   date={post.date}
                 />

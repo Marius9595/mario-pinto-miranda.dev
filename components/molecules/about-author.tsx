@@ -19,7 +19,7 @@ export const AboutAuthor = () => {
     >
       <AuthorName/>
       <RoleOfAuthor/>
-      <Tags size='lg' tags={['Data', 'Web', 'Mobile']} />
+      <Tags tags={['Data', 'Web', 'Mobile']} />
       <AuthorDescription/>
     </Box>
   );

@@ -6,7 +6,7 @@ export const AuthorName = () => {
   return(
     <Heading
       as="h1" 
-      fontSize={{ base: "x-large", sm: "medium", md: "7xl" }}
+      fontSize={{ base: "2xl", sm: "2xl", md: "4xl", xl:'5xl' }}
     >
       Mario S. Pinto Miranda
     </Heading>

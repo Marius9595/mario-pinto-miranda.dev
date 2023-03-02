@@ -33,7 +33,7 @@ export const PostPreview = (postPreview:Post) =>{
                   <ImagePostPreview src={postPreview.imageUrl} alt='algo'/>
                   <TitlePostPreview text={postPreview.title} />
                 </Link>
-                <DatePost date={postPreview.date} size='sm' marginTop={2} />
+                <DatePost date={postPreview.date} size={{base:'sm'}} marginTop={2} />
                 <PostTags tags={postPreview.tags.split(',')} marginTop="3" size='md'/>
                 <ExcerptPostPreview text={postPreview.excerpt}/>
               </Box>

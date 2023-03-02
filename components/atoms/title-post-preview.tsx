@@ -5,7 +5,7 @@ interface TitlePostPreviewProp {
   text: string;
 }
 export function TitlePostPreview({ text }: TitlePostPreviewProp) {
-  return <Heading fontSize="xl" marginTop="2">
+  return <Heading fontSize={{base:'md', sm:'sm', md:'md', lg:'lg'}} marginTop="2">
     {text}
   </Heading>;
 }

@@ -3,7 +3,7 @@ import { Tag } from '@chakra-ui/react';
 
 interface DatePostProps {
   date: string
-  size: string
+  size: object
   marginTop: number
 }
 export const DatePost = ({ date, size, marginTop }: DatePostProps) => {

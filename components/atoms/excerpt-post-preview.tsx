@@ -6,7 +6,7 @@ interface ExcerptPostPreviewProps {
 }
 export const ExcerptPostPreview = ({ text }: ExcerptPostPreviewProps) => {
   return (
-    <Text as="p" fontSize="md" marginTop="2">
+    <Text as="p" fontSize={{base:'sm', sm:'sm', md:'md', lg:'lg'}} marginTop="2" textAlign={"justify"}>
       {text}
     </Text>
   )

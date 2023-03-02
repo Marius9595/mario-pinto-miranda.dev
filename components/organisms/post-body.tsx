@@ -7,7 +7,7 @@ type Props = {
 
 export const PostBody = ({ content }: Props) => {
   return (
-    <Box >
+    <Box>
       <div
         className={markdownStyles['markdown']}
         dangerouslySetInnerHTML={{ __html: content }}

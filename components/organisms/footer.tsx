@@ -21,7 +21,7 @@ export const Footer = () => {
         justify={{ base: 'center', md: 'space-between' }}
         align={{ base: 'center', md: 'center' }}
       >
-        <Text> Mario S. Pinto Miranda All rights reserved © 2023</Text>
+        <Text> All rights reserved © 2023 Mario S. Pinto Miranda </Text>
         <SocialMediaStack/>
       </Container>
     </Box>
