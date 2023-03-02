@@ -24,7 +24,7 @@ export  function Nav() {
   const { colorMode, toggleColorMode } = useColorMode()
   return (
     <>
-      <Box bg={"orange.600"} px={4}>
+      <Box bg={"orange.500"} px={4}>
         <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
           <IconButton
             size={"md"}
